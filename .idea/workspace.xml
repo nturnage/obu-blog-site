@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f1ba58a-7837-46b3-8201-f5160cd2cf87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/obu-blog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/template-demo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layout/mainlayout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layout/partials/footer-scripts.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layout/partials/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layout/partials/head.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layout/partials/header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layout/partials/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Article.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/author/submit-article.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -146,6 +140,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Christopher\Documents\programming\laravel\obu-blog-site\resources\views\author" />
       <recent name="C:\Users\Christopher\Documents\programming\laravel\obu-blog-site\resources\views\home" />
       <recent name="C:\Users\Christopher\Documents\programming\laravel\obu-blog-site\resources\views\layout" />
     </key>
@@ -178,7 +173,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569787530160</updated>
-      <workItem from="1569787533578" duration="4828000" />
+      <workItem from="1569787533578" duration="8688000" />
     </task>
     <servers />
   </component>

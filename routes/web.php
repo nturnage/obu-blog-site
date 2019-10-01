@@ -16,4 +16,6 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', 'HomeController@index');
 
+Route::get('/create', 'ArticleController@create');
+
 Route::get('/demo', 'HomeController@demo');
