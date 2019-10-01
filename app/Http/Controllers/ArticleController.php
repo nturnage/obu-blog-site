@@ -17,4 +17,9 @@ class ArticleController extends Controller
     public function create() {
         return view('author.submit-article');
     }
+
+    public function testShow()
+    {
+        return view('home.article');
+    }
 }

@@ -19,3 +19,5 @@ Route::get('/', 'HomeController@index');
 Route::get('/create', 'ArticleController@create');
 
 Route::get('/demo', 'HomeController@demo');
+
+Route::get('/demo-article', 'ArticleController@testShow');
