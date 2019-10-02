@@ -1,0 +1,63 @@
+body {
+    background: #e2e2e2;
+}
+
+header {
+    min-height: 150px;
+    background: #255F2B;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-content {
+    padding-top: 10px;
+}
+
+.header-title,
+.header-sub {
+    color: #FCAF17;
+}
+
+.header-sub {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 3px 0;
+}
+
+.content {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+/** Comments Styling **/
+body{margin-top:20px;}
+
+.comment-wrapper .panel-body {
+    max-height:650px;
+    overflow:auto;
+}
+
+.btn-info {
+    background-color: #2e9134;
+}
+
+.like-button:hover {
+    background-color:#255F2B;
+
+}
+
+.like-button {
+    font-size: 1.5em;
+}
+
+.comment-wrapper .media-list .media img {
+    width:64px;
+    height:64px;
+    border:2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom:1px dashed #efefef;
+    margin-bottom:25px;
+}

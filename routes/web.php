@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+use App\Http\Controllers\HomeController;
+
+Route::get('/', 'HomeController@index');
+
+Route::get('/create', 'ArticleController@create');
+
+Route::get('/demo', 'HomeController@demo');
+
+Route::get('/demo-article', 'ArticleController@testShow');
