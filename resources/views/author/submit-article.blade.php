@@ -11,6 +11,10 @@
                     <input type="text" class="form-control" id="articleTitle" aria-describedby="titleHelp" placeholder="Enter Article Title">
                 </div>
                 <div class="form-group">
+                    <label for="articleAuthor">Author</label>
+                    <input type="text" class="form-control" id="articleAuthor" aria-describedby="authorHelp" placeholder="Enter Author Name">
+                </div>
+                <div class="form-group">
                     <label for="articleText">Article Text</label>
                     <textarea class="form-control" id="ArticleText" rows="6"></textarea>
                 </div>
