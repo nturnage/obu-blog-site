@@ -14,9 +14,18 @@
 
 use App\Http\Controllers\HomeController;
 
-Route::get('/', 'HomeController@index');
+Route::get('/', function() {
+    return redirect('/posts');
+});
 
-Route::get('/create', 'ArticleController@create');
+Route::get('/posts', 'PostController@index');
+
+Route::get('/posts/{post}','PostController@show');
+
+
+Route::post('/posts', "PostController@store");
+
+Route::get('/create-post', 'PostController@create');
 
 Route::get('/demo', 'HomeController@demo');
 

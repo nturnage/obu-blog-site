@@ -38,6 +38,18 @@ body{margin-top:20px;}
     overflow:auto;
 }
 
+.btn {
+    background-color: #2e9134;
+}
+
+.read-more-btn {
+
+    size: 15px;
+}
+
+.read-more-btn:hover {
+    background-color:#255F2B;
+}
 .btn-info {
     background-color: #2e9134;
 }

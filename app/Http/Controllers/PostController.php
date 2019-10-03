@@ -14,7 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all()->reverse();
+        return view('home.index', ['posts' => $posts]);
+
     }
 
     /**
@@ -24,7 +26,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('post.submit-post');
     }
 
     /**
@@ -35,7 +37,15 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post();
+        $post->title = request('title');
+        $post->author = request('author');
+        $post->content = request('content');
+        $post->likes = 0;
+        $post->save();
+
+        return redirect('/posts');
+
     }
 
     /**
@@ -44,9 +54,10 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        //
+        $post =  Post::find($id);
+        return view('post.post', ['post' => $post]);
     }
 
     /**
