@@ -14,6 +14,17 @@
 
 use App\Http\Controllers\HomeController;
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => ['auth']], function() {
+	Route::resource('posts', 'PostsController');
+	// KDL - I need to think about this. It may just need to be a blog-creator resource, not a roles resource
+	// I think roles would be more like an admin interface. We just want to be able to create blog-creators.
+	Route::resource('roles', 'RolesController');
+});
+
 Route::get('/', 'HomeController@index');
 
 Route::get('/create', 'ArticleController@create');
