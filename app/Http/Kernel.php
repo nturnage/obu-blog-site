@@ -60,9 +60,15 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+<<<<<<< HEAD
                 // KDL This middleware is for laravel-permissions to work
                 'role' => \Spatie]Permission\Middleware\RoleMiddleware::class,
                 'permission' => \Spatie\Permission\Middleware\PermissionMiddleware::class,
+=======
+		// KDL This middleware is for laravel-permissions to work
+                'role' => \Spatie\Permission\Middleware\RoleMiddleware::class,
+		'permission' => \Spatie\Permission\Middleware\PermissionMiddleware::class,
+>>>>>>> No features added
     ];
 
     /**
