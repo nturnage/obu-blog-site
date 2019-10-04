@@ -16,19 +16,13 @@ use App\Http\Controllers\HomeController;
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// KDL - I am making the default web request go to the ArticleController index
+// because we want to display all of the articles in a feed. I think it makes more
+// sense to hit the articles controller since we are displaying articles.
+Route::get('/', 'ArticleController@index');
 
-Route::group(['middleware' => ['auth']], function() {
-	Route::resource('posts', 'PostsController');
-	// KDL - I need to think about this. It may just need to be a blog-creator resource, not a roles resource
-	// I think roles would be more like an admin interface. We just want to be able to create blog-creators.
-	Route::resource('roles', 'RolesController');
-});
-
-Route::get('/', 'HomeController@index');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/create', 'ArticleController@create');
-
-Route::get('/demo', 'HomeController@demo');
 
 Route::get('/demo-article', 'ArticleController@testShow');

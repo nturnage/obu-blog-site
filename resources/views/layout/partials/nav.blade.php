@@ -14,10 +14,17 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <p class="navbar-text m-2 my-sm-0">John Doe: Blogger</p>
-            <button class="btn m-2 my-sm-0" type="button">Logout</button>
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			@if (Auth::check())
+				<p class="navbar-text m-2 my-sm-0">{{ Auth::user()->name }}</p>
+				<a class="btn m-2 my-sm-0" role="button" href="./logout">Logout</a>
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			@else
+				<a class="btn m-2 my-sm-0" role="button" href="./login">Login</a>
+				<a class="btn m-2 my-sm-0" role="button" href="./register">Register</a>
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			@endif
         </form>
     </div>
 </nav>
