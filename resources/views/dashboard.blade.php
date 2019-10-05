@@ -10,7 +10,8 @@
                 </div>
 
                 <div class="col-md-6 text-center">
-                    <button id="db1" type="button" class="btn btn-secondary btn-lg">Create New Blogger</button>
+                    <!-- Check to make sure this works when these changes are merged into master branch -->
+                    <a href="/blogcreator/create" class="btn btn-secondary btn-lg">Create New Blogger</a>
                 </div>
             </div>
         </div>
