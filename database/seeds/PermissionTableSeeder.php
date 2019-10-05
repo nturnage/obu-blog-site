@@ -4,6 +4,8 @@ use Illuminate\Database\Seeder;
 
 // KDL - Use the Spatie Permissions class
 use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\PermissionRegistrar;
 
 // KDL - A seeder to create permissions for the blog
 class PermissionTableSeeder extends Seeder
@@ -15,16 +17,26 @@ class PermissionTableSeeder extends Seeder
      */
     public function run()
     {
-		// KDL - We only need permission for creating new blog-creators
-		// and creating new posts
-		$permissions = [
-			'create new blog-creator',
-			'create new post'
-		];
+		//KDL - I lifted this code from the spate demo project
+		//Reset cached roles and permission
+		app()[PermissionRegistrar::class]->forgetCachedPermissions();
 
-		// KDL - create the new permissions
-		foreach ($permissions as $permission) {
-			Permission::create(['name' => $permission]);
-		}
+		//KDL - Create permissions
+		Permission::create(['name' => 'create new post']);
+		Permission::create(['name' => 'create new blog-creator']);
+
+		//KDL - Create blog-creator role and give it permission to create
+		// posts and blog-creators 
+		$role = Role::create(['name' => 'blog-creator']);
+		$role->givePermissionTo('create new post');
+		$role->givePermissionTo('create new blog-creator');
+
+		//KDL - Create a default user
+		$user = Factory(App\User::class)->create([
+			'name' => 'Bugs Bunny',
+			'email' => 'bugs@bunny.com',
+			// factory default password is 'secret'
+		]);
+		$user->assignRole($role);
     }
 }

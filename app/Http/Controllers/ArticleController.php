@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Http\Controllers\Controller;
+use App\User;
 
 use Illuminate\Http\Request;
 
@@ -18,8 +19,6 @@ class ArticleController extends Controller
 
     public function index()
     {
-		$user = User::all();
-		dd($user);
 		return view('home.index');
     }
 
@@ -27,7 +26,12 @@ class ArticleController extends Controller
     {
 
     }
-    public function create() {
+
+    public function create() 
+	{
+		//KDL - To check permissions, we call auth() to find out who is logged in 
+		//and we call user() to get that user and we call can() on that user with
+		//the name of the permission 
 		if((auth()->user() != null) && (auth()->user()->can('create new post')))
 		{
         	return view('author.submit-article');

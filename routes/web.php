@@ -23,6 +23,9 @@ Route::get('/', 'ArticleController@index');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
+Route::get('/blog-creator/create', 'BlogCreatorController@create');
+Route::post('/blog-creator', 'BlogCreatorController@store');
+
 Route::get('/create', 'ArticleController@create');
 
 Route::get('/demo-article', 'ArticleController@testShow');
