@@ -37,6 +37,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        //create a new post from the http request, save it and redirect to the home page
         $post = new Post();
         $post->title = request('title');
         $post->author = request('author');
@@ -56,6 +57,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
+        //uses elequent to get the post by id and pass it to the view
         $post =  Post::find($id);
         return view('post.post', ['post' => $post]);
     }
