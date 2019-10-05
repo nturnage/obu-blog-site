@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center">
-                    <button id="db1" type="button" class="btn btn-primary btn-lg">Create New Post</button>
+                    <a href="/create-post" class="btn btn-primary btn-lg">Create New Post</a>
                 </div>
 
                 <div class="col-md-6 text-center">
