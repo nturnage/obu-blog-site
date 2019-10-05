@@ -14,10 +14,21 @@
 
 use App\Http\Controllers\HomeController;
 
-Route::get('/', 'HomeController@index');
+//set homepage to posts page
+Route::get('/', function() {
+    return redirect('/posts');
+});
 
-Route::get('/create', 'ArticleController@create');
+Route::get('/posts', 'PostController@index');
 
-Route::get('/demo', 'HomeController@demo');
 
-Route::get('/demo-article', 'ArticleController@testShow');
+//{post} is a wild card that passes the number given to the post object
+//todo make this not show unless there is an article
+Route::get('/posts/{post}','PostController@show');
+
+
+Route::post('/posts', "PostController@store");
+
+Route::get('/create-post', 'PostController@create');
+
+
