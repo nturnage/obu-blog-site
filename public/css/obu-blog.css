@@ -75,6 +75,11 @@ body{margin-top:20px;}
     background-color:#255F2B;
 }
 
+.like-button:hover {
+    background-color:#255F2B;
+
+}
+
 .like-button {
     font-size: 1.5em;
 }
