@@ -31,4 +31,4 @@ Route::post('/posts', "PostController@store");
 
 Route::get('/create-post', 'PostController@create');
 
-
+Route::view('/dashboard', 'dashboard');

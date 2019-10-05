@@ -47,16 +47,32 @@ body{margin-top:20px;}
     size: 15px;
 }
 
-.read-more-btn:hover {
+.read-more-btn:hover{
     background-color:#255F2B;
 }
 .btn-info {
     background-color: #2e9134;
 }
 
-.like-button:hover {
-    background-color:#255F2B;
+.btn-primary{
+    background-color:#2e9134;
+}
 
+.btn-primary:hover{
+    color:#FCAF17;
+    background-color:#255F2B;
+}
+
+.btn-secondary{
+    background-color:#2e9134;
+}
+
+.btn-secondary:hover{
+    color:#FCAF17;
+    background-color:#255F2B;
+}
+.like-secondary:hover {
+    background-color:#255F2B;
 }
 
 .like-button {
