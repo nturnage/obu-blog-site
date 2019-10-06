@@ -34,3 +34,5 @@ Route::get('/create-post', 'PostController@create');
 
 Route::get('/blog-creator/create', 'BlogCreatorController@create');
 Route::post('/blog-creator', 'BlogCreatorController@store');
+Route::view('/dashboard', 'dashboard');
+
