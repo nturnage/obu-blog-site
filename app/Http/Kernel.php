@@ -61,8 +61,8 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
 		// KDL This middleware is for laravel-permissions to work
-		'role' => \Spatie\Permission\Middleware\RoleMiddleware::class,
-		'permission' => \Spatie\Permission\Middleware\PermissionMiddleware::class,
+		'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
+		'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
     ];
 
     /**

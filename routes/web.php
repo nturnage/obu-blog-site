@@ -18,7 +18,9 @@ use App\Http\Controllers\HomeController;
 Route::get('/', function() {
     return redirect('/posts');
 });
+
 Auth::routes();
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/posts', 'PostController@index');
 
@@ -28,11 +30,10 @@ Route::get('/posts', 'PostController@index');
 Route::get('/posts/{post}','PostController@show');
 
 
-Route::post('/posts', "PostController@store");
-Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
-Route::get('/create-post', 'PostController@create');
-
-Route::get('/blog-creator/create', 'BlogCreatorController@create');
-Route::post('/blog-creator', 'BlogCreatorController@store');
-Route::view('/dashboard', 'dashboard');
-
+Route::group(['middleware' => ['role:blog-creator']], function() {
+	Route::get('/blog-creator/create', 'BlogCreatorController@create');
+	Route::post('/blog-creator', 'BlogCreatorController@store');
+	Route::view('/dashboard', 'dashboard');
+	Route::get('/create-post', 'PostController@create');
+	Route::post('/posts', "PostController@store");
+});
