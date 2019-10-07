@@ -29,7 +29,7 @@ class BlogCreatorController extends Controller
 
         }
 
-	public function store(Request $request) 
+	public function store(Request $request)
 	{
                 if((auth()->user() != null) && (auth()->user()->can('create new blog-creator')))
                 {
@@ -44,7 +44,7 @@ class BlogCreatorController extends Controller
                                 $user = new User;
                                 $user->name = 'New Blog Creator';
                                 $user->email = $request->input('email');
-			$user->password = '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm'; // secret
+			                    $user->password = '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm'; // secret
                                 $user->save();
                         }
                         else
