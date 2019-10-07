@@ -11,6 +11,28 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+use App\Http\Controllers\HomeController;
+
+//set homepage to posts page
+Route::get('/', function() {
+    return redirect('/posts');
 });
+Auth::routes();
+
+Route::get('/posts', 'PostController@index');
+
+
+//{post} is a wild card that passes the number given to the post object
+//todo make this not show unless there is an article
+Route::get('/posts/{post}','PostController@show');
+
+
+Route::post('/posts', "PostController@store");
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/create-post', 'PostController@create');
+
+Route::get('/blog-creator/create', 'BlogCreatorController@create');
+Route::post('/blog-creator', 'BlogCreatorController@store');
+Route::view('/dashboard', 'dashboard');
+
