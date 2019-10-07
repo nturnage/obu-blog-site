@@ -21,7 +21,7 @@ class BlogCreatorController extends Controller
 		return view('blogcreator.create');
 	}            }
 
-	public function store(Request $request) 
+	public function store(Request $request)
 	{
 		$user;
 		// KDL - get the user with the email address from the request

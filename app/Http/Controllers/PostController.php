@@ -43,8 +43,11 @@ class PostController extends Controller
         $post->author = request('author');
         $post->content = request('content');
         $post->likes = 0;
-        $post->save();
 
+        //extremely basic form validation
+        if($post->title && $post->author && $post->content) {
+            $post->save();
+        }
         return redirect('/posts');
 
     }

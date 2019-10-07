@@ -31,7 +31,6 @@ header {
 }
 
 /** Comments Styling **/
-body{margin-top:20px;}
 
 .comment-wrapper .panel-body {
     max-height:650px;
@@ -40,7 +39,14 @@ body{margin-top:20px;}
 
 .btn {
     background-color: #2e9134;
+    color: #ffffff
 }
+
+.btn-link {
+    color: #ffffff;
+}
+
+
 
 .read-more-btn {
 

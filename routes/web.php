@@ -30,6 +30,8 @@ Route::get('/posts', 'PostController@index');
 Route::get('/posts/{post}','PostController@show');
 
 
+// KDL - By putting these routes in the 'role:blog-creator' middleware, whoever is
+// hitting the route has to be a blog-creator for them to work.
 Route::group(['middleware' => ['role:blog-creator']], function() {
 	Route::get('/blog-creator/create', 'BlogCreatorController@create');
 	Route::post('/blog-creator', 'BlogCreatorController@store');
