@@ -10,23 +10,23 @@
                 <a class="nav-link" href="/">Posts <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/create-post">Create a Post</a>
+				@can('create new post')
+					<a class="nav-link" href="/create-post">Create a Post</a>
+				@endcan
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
 			@if (Auth::check())
 				<p class="navbar-text m-2 my-sm-0">{{ Auth::user()->name }}</p>
-                                @can('create new post')
-                                        <a class="btn m-2 my-sm-0" role="button" href="/create">Write</a>
-                                        <a class="btn m-2 my-sm-0" role="button" href="/dashboard">Dashboard</a>
-                                @endcan
-                                <a class="btn m-2 my-sm-0" role="button" href="/logout">Logout</a>
+				@can('create new post')
+					<a class="btn m-2 my-sm-0" role="button" href="/dashboard">Dashboard</a>
+				@endcan
+				<a class="btn m-2 my-sm-0" role="button" href="/logout">Logout</a>
 			@else
-                                <a class="btn m-2 my-sm-0" role="button" href="/login">Login</a>
-                                <a class="btn m-2 my-sm-0" role="button" href="/register">Register</a>
-
+				<a class="btn m-2 my-sm-0" role="button" href="/login">Login</a>
+				<a class="btn m-2 my-sm-0" role="button" href="/register">Register</a>
 			@endif
-        </form>
+		</form>
     </div>
 </nav>
 
