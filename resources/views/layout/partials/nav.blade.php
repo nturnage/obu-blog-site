@@ -25,6 +25,7 @@
 			@else
 				<a class="btn m-2 my-sm-0" role="button" href="/login">Login</a>
 				<a class="btn m-2 my-sm-0" role="button" href="/register">Register</a>
+			@endif
 		</form>
     </div>
 </nav>
