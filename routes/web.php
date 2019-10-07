@@ -29,7 +29,7 @@ Route::get('/posts/{post}','PostController@show');
 
 
 Route::post('/posts', "PostController@store");
-Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/create-post', 'PostController@create');
 
 Route::get('/blog-creator/create', 'BlogCreatorController@create');
