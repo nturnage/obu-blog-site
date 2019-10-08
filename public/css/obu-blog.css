@@ -13,6 +13,11 @@ header {
     padding-top: 10px;
 }
 
+.btn:hover {
+	color: #FCAF17;
+	background-color: #255F2B;
+}
+
 .header-title,
 .header-sub {
     color: #FCAF17;
@@ -62,6 +67,7 @@ header {
 
 .btn-primary{
     background-color:#2e9134;
+	border-color: #2e9134;
 }
 
 .btn-primary:hover{
