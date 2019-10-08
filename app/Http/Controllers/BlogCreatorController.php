@@ -62,3 +62,4 @@ class BlogCreatorController extends Controller
 		}
 	}
 }
+

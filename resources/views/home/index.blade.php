@@ -8,7 +8,7 @@
             <div class="content">
                 <h3>{{$post->title}}</h3>
                 <p class="text-right">{{$post->created_at}}</p>
-                <p>{{$post->content}}</p>
+                <p>{{str_limit($post->content, $limit = 300, $end = '...')}}</p>
                 <h6 class="text-right">--{{$post->author}}</h6>
                 <a class="btn btn-primary read-more-btn" href="/posts/{{$post->id}}" role="button">Read More...</a>
             </div>

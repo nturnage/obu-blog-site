@@ -31,7 +31,6 @@ header {
 }
 
 /** Comments Styling **/
-body{margin-top:20px;}
 
 .comment-wrapper .panel-body {
     max-height:650px;
@@ -40,18 +39,46 @@ body{margin-top:20px;}
 
 .btn {
     background-color: #2e9134;
+    color: #ffffff
 }
+
+.btn-link {
+    color: #ffffff;
+}
+
+
 
 .read-more-btn {
 
     size: 15px;
 }
 
-.read-more-btn:hover {
+.read-more-btn:hover{
     background-color:#255F2B;
 }
 .btn-info {
     background-color: #2e9134;
+}
+
+.btn-primary{
+    background-color:#2e9134;
+}
+
+.btn-primary:hover{
+    color:#FCAF17;
+    background-color:#255F2B;
+}
+
+.btn-secondary{
+    background-color:#2e9134;
+}
+
+.btn-secondary:hover{
+    color:#FCAF17;
+    background-color:#255F2B;
+}
+.like-secondary:hover {
+    background-color:#255F2B;
 }
 
 .like-button:hover {
