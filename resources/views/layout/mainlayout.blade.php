@@ -13,6 +13,9 @@
 
         @include('layout.partials.footer')
         @include('layout.partials.footer-scripts')
+
+		@yield('script') <!-- KDL - for custom JavaScript -->
     </body>
+
 
 </html>
